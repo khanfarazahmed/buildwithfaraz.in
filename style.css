@@ -145,19 +145,21 @@
     display: none;
 }
 
+
 #particles {
     position: absolute;
     inset: 0;
+    overflow: hidden;
     z-index: 1;
 }
 
 .particle {
     position: absolute;
+    bottom: -20px;
     border-radius: 50%;
     opacity: 0.6;
     background: rgba(255, 255, 255, 0.8);
     animation: floatUp linear infinite;
-}
 }
 
 [data-theme="dark"] .particle {
@@ -165,7 +167,10 @@
 }
 
 @keyframes floatUp {
-    from { top: 100%; }
-    to { top: -10%; }
-}
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-120vh);
+    }
 }
