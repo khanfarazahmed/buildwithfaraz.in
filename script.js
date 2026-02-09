@@ -27,29 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const particles = document.getElementById("particles");
 
-    let particleCount = 0;
-const maxParticles = 80;
+    for (let i = 0; i < 100; i++) {
+        const p = document.createElement("div");
+        p.className = "particle";
 
-const particleInterval = setInterval(() => {
-    if (particleCount >= maxParticles) {
-        clearInterval(particleInterval);
-        return;
-    }
+        const size = Math.random() * 6 + 3;
+        p.style.width = `${size}px`;
+        p.style.height = `${size}px`;
 
-    const p = document.createElement("div");
-    p.className = "particle";
+        p.style.left = `${Math.random() * 100}%`;
+        p.style.animationDuration = `${Math.random() * 15 + 10}s`;
+        p.style.animationDelay = `-${Math.random() * 10}s`;
 
-    const size = Math.random() * 6 + 3;
-    p.style.width = `${size}px`;
-    p.style.height = `${size}px`;
-
-    p.style.left = `${Math.random() * 100}%`;
-    p.style.animationDuration = `${Math.random() * 10 + 6}s`;
-
-    particles.appendChild(p);
-    particleCount++;
-
-}, 120);
+        particles.appendChild(p);
     }
 
 });
