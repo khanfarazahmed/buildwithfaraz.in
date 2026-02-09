@@ -28,14 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const particles = document.getElementById("particles");
 
     for (let i = 0; i < 50; i++) {
-        const p = document.createElement("div");
-        p.className = "particle";
-        const size = Math.random() * 6 + 3;
-        p.style.width = p.style.height = `${size}px`;
-        p.style.left = `${Math.random() * 100}%`;
-        p.style.top = "100%";
-        p.style.animationDuration = `${Math.random() * 15 + 10}s`;
-        p.style.animationDelay = `${Math.random() * 5}s`;
-        particles.appendChild(p);
+    const p = document.createElement("div");
+    p.className = "particle";
+    const size = Math.random() * 6 + 3;
+    p.style.width = p.style.height = `${size}px`;
+    p.style.left = `${Math.random() * 100}%`;
+    p.style.top = "100%";
+    p.style.animationDuration = `${Math.random() * 15 + 10}s`;
+    p.style.animationDelay = `${Math.random() * 5}s`;
+    particles.appendChild(p);
+}
     }
 });
