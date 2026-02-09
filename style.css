@@ -141,15 +141,19 @@ button {
 }
 
 .particle {
+    .particle {
     position: absolute;
-    background: rgba(255, 255, 255, 0.7);
+    background: var(--glow-color);
     border-radius: 50%;
     opacity: 0.6;
     animation: floatUp linear infinite;
 }
+    [data-theme="light"] .particle {
+    background: rgba(255, 255, 255, 0.8);
+}
 }
 
 @keyframes floatUp {
-    from { transform: translateY(100vh); }
-    to { transform: translateY(-120px); }
+    from { transform: translateY(0); }
+    to { transform: translateY(-120vh); }
 }
