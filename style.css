@@ -1,4 +1,4 @@
-/* Theme Variables */
+
 :root {
     --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --text-color: #333;
@@ -23,7 +23,7 @@
     --shadow: 0 10px 30px rgba(231, 76, 60, 0.5);
 }
 
-/* Hero Enhancements */
+
 .hero {
     background: var(--bg-gradient);
     position: relative;
@@ -113,7 +113,7 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
-/* Particle Effects */
+
 #particles {
     position: absolute;
     top: 0;
@@ -147,7 +147,7 @@
     50% { text-shadow: 0 0 30px var(--glow-color), 0 0 40px var(--glow-color); }
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
     .hero-content {
         padding: 2rem;
