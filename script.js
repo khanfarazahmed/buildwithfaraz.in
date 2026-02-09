@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const popup = document.getElementById("popup");
     const closePopup = document.getElementById("close-popup");
 
+    
     themeToggle.addEventListener("click", () => {
         const currentTheme = document.documentElement.getAttribute("data-theme");
         const newTheme = currentTheme === "dark" ? "light" : "dark";
@@ -12,11 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("theme", newTheme);
     });
 
+   
     document.documentElement.setAttribute(
         "data-theme",
         localStorage.getItem("theme") || "light"
     );
 
+   
     learnMoreBtn.addEventListener("click", () => {
         popup.classList.remove("hidden");
     });
@@ -26,47 +29,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const particles = document.getElementById("particles");
+    const particleCount = 80;
 
-    for (let i = 0; i < 80; i++) {
-    const p = document.createElement("div");
-    p.className = "particle";
+    for (let i = 0; i < particleCount; i++) {
+        const p = document.createElement("div");
+        p.className = "particle";
 
-    const size = Math.random() * 6 + 3;
-    p.style.width = `${size}px`;
-    p.style.height = `${size}px`;
+        const size = Math.random() * 6 + 3;
+        p.style.width = `${size}px`;
+        p.style.height = `${size}px`;
 
-    p.style.left = `${Math.random() * 100}%`;
-    p.style.animationDuration = `${Math.random() * 10 + 6}s`;
-    p.style.animationDelay = `-${Math.random() * 10}s`;
+        p.style.left = `${Math.random() * 100}%`;
+        p.style.animationDuration = `${Math.random() * 10 + 6}s`;
+        p.style.animationDelay = `-${Math.random() * 10}s`;
 
-    particles.appendChild(p);
-}for (let i = 0; i < 80; i++) {
-    const p = document.createElement("div");
-    p.className = "particle";
-
-    const size = Math.random() * 6 + 3;
-    p.style.width = `${size}px`;
-    p.style.height = `${size}px`;
-
-    p.style.left = `${Math.random() * 100}%`;
-    p.style.animationDuration = `${Math.random() * 10 + 6}s`;
-    p.style.animationDelay = `-${Math.random() * 10}s`;
-
-    particles.appendChild(p);
-}for (let i = 0; i < 80; i++) {
-    const p = document.createElement("div");
-    p.className = "particle";
-
-    const size = Math.random() * 6 + 3;
-    p.style.width = `${size}px`;
-    p.style.height = `${size}px`;
-
-    p.style.left = `${Math.random() * 100}%`;
-    p.style.animationDuration = `${Math.random() * 10 + 6}s`;
-    p.style.animationDelay = `-${Math.random() * 10}s`;
-
-    particles.appendChild(p);
-}
+        particles.appendChild(p);
     }
 
 });
