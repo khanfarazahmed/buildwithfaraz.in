@@ -155,8 +155,9 @@
     position: absolute;
     border-radius: 50%;
     opacity: 0.6;
-    animation: floatUp linear infinite;
     background: rgba(255, 255, 255, 0.8);
+    animation: floatUp linear infinite;
+}
 }
 
 [data-theme="dark"] .particle {
@@ -164,6 +165,7 @@
 }
 
 @keyframes floatUp {
-    from { transform: translateY(100vh); }
-    to { transform: translateY(-120vh); }
+    from { top: 100%; }
+    to { top: -10%; }
+}
 }
