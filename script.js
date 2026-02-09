@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         p.style.left = `${Math.random() * 100}%`;
         p.style.animationDuration = `${Math.random() * 15 + 10}s`;
-        p.style.animationDelay = `${Math.random() * 10}s`;
+        p.style.animationDelay = `-${Math.random() * 10}s`;
 
         particles.appendChild(p);
     }
