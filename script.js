@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const particles = document.getElementById("particles");
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 100; i++) {
         const p = document.createElement("div");
         p.className = "particle";
 
