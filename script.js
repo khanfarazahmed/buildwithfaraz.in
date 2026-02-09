@@ -12,8 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("theme", newTheme);
     });
 
-    const savedTheme = localStorage.getItem("theme") || "light";
-    document.documentElement.setAttribute("data-theme", savedTheme);
+    document.documentElement.setAttribute(
+        "data-theme",
+        localStorage.getItem("theme") || "light"
+    );
 
     learnMoreBtn.addEventListener("click", () => {
         popup.classList.remove("hidden");
@@ -22,5 +24,18 @@ document.addEventListener("DOMContentLoaded", () => {
     closePopup.addEventListener("click", () => {
         popup.classList.add("hidden");
     });
+
+    const particles = document.getElementById("particles");
+
+    for (let i = 0; i < 50; i++) {
+        const p = document.createElement("div");
+        p.className = "particle";
+        const size = Math.random() * 6 + 3;
+        p.style.width = p.style.height = `${size}px`;
+        p.style.left = `${Math.random() * 100}%`;
+        p.style.animationDuration = `${Math.random() * 8 + 4}s`;
+        p.style.animationDelay = `${Math.random() * 5}s`;
+        particles.appendChild(p);
+    }
 
 });
