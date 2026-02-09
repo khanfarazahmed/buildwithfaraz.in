@@ -27,19 +27,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const particles = document.getElementById("particles");
 
-    for (let i = 0; i < 100; i++) {
-        const p = document.createElement("div");
-        p.className = "particle";
+    for (let i = 0; i < 80; i++) {
+    const p = document.createElement("div");
+    p.className = "particle";
 
-        const size = Math.random() * 6 + 3;
-        p.style.width = `${size}px`;
-        p.style.height = `${size}px`;
+    const size = Math.random() * 6 + 3;
+    p.style.width = `${size}px`;
+    p.style.height = `${size}px`;
 
-        p.style.left = `${Math.random() * 100}%`;
-        p.style.animationDuration = `${Math.random() * 15 + 10}s`;
-        p.style.animationDelay = `-${Math.random() * 10}s`;
+    p.style.left = `${Math.random() * 100}%`;
+    p.style.animationDuration = `${Math.random() * 10 + 6}s`;
+    p.style.animationDelay = `-${Math.random() * 10}s`;
 
-        particles.appendChild(p);
+    particles.appendChild(p);
+}for (let i = 0; i < 80; i++) {
+    const p = document.createElement("div");
+    p.className = "particle";
+
+    const size = Math.random() * 6 + 3;
+    p.style.width = `${size}px`;
+    p.style.height = `${size}px`;
+
+    p.style.left = `${Math.random() * 100}%`;
+    p.style.animationDuration = `${Math.random() * 10 + 6}s`;
+    p.style.animationDelay = `-${Math.random() * 10}s`;
+
+    particles.appendChild(p);
+}for (let i = 0; i < 80; i++) {
+    const p = document.createElement("div");
+    p.className = "particle";
+
+    const size = Math.random() * 6 + 3;
+    p.style.width = `${size}px`;
+    p.style.height = `${size}px`;
+
+    p.style.left = `${Math.random() * 100}%`;
+    p.style.animationDuration = `${Math.random() * 10 + 6}s`;
+    p.style.animationDelay = `-${Math.random() * 10}s`;
+
+    particles.appendChild(p);
+}
     }
 
 });
